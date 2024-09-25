@@ -10,7 +10,7 @@
 }
 
 :root{
-    --bg-color: #081b29;
+    --bg-color: #0C172E;
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
@@ -76,6 +76,9 @@ section{
     display: flex;
     align-items: center;
     padding: 0 9%;
+    background: url('img1.png') no-repeat;
+    background-size: cover;
+    background-position: center;
     
 }
 
@@ -172,9 +175,9 @@ section{
 .home-sci{
     position: absolute;
     bottom: 4rem;
-    left: 150px
+    left: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     
 }
 
@@ -215,4 +218,181 @@ section{
 .home-sci a:hover::before{
     width: 100%;
     border-radius: 50%;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover{
+    background: var(--bg-color);
+    opacity: 0.8;
+
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+}
+
+.heading{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.about-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--main-color);
+}
+
+.about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 0.2rem solid var(--second-bg-color);
+    border-bottom: 0.2rem solid var(--second-bg-color);
+    border-left: 0.2rem solid var(--main-color);
+    border-right: 0.2rem solid var(--main-color);
+    
+}
+
+
+.about-content{
+    text-align: center;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns{
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box .btns a::before{
+    background: var(--second-bg-color);
+}
+
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education .education-raw{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education .education-raw .education-column{
+    flex: 1 1 40rem;
+}
+
+.education .education-raw .education-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education .education-raw .education-column .education-box{
+    border-left: 0.2rem solid var(--main-color);
+}
+
+.education-box .education-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.education-box .education-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.education-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.education-content .content:hover::before{
+    width: 100%;
+}
+
+.education-content .content .year{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+education-content .content .year i{
+    padding-right: 0.5rem;
+}
+
+education-content .content h3{
+    font-size: 2rem;
+}
+
+education-content .content p{
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
 }
