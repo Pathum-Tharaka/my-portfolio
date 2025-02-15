@@ -885,9 +885,3 @@ education-content .content p{
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
-@keyframes aboutSpinner{
-    100%{
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
